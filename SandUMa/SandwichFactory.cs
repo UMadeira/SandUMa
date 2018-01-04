@@ -2,18 +2,9 @@
 {
     public class SandwichFactory
     {
-        public ISandwich CreateWhiteBread()
-        {
-            return new WhiteBread();
-        }
-        public ISandwich CreateWholeGrainBread()
-        {
-            return new WholeGrainBread();
-        }
-        public ISandwich CreatePotatoBread()
-        {
-            return new PotatoBread();
-        }
+        public ISandwich CreateWhiteBread() => new WhiteBread();
+        public ISandwich CreateWholeGrainBread() => new WholeGrainBread();
+        public ISandwich CreatePotatoBread() => new PotatoBread();
         public ISandwich CreateBread( string aType )
         {
             switch ( aType )
@@ -25,23 +16,11 @@
             return null;
         }
 
-        public ICondiment CreateButter( ISandwich aSandwich )
-        {
-            return new Butter( aSandwich );
-        }
-        public ICondiment CreateCheese( ISandwich aSandwich )
-        {
-            return new Cheese( aSandwich );
-        }
-        public ICondiment CreateHam( ISandwich aSandwich )
-        {
-            return new Ham( aSandwich );
-        }
-        public ICondiment CreateLettuce( ISandwich aSandwich )
-        {
-            return new Lettuce( aSandwich );
-        }
-        public ICondiment CreateCondiment( string aType, ISandwich aSandwich )
+        public ICondiment    CreateButter( ISandwich aSandwich ) => new Butter( aSandwich );
+        public ICondiment    CreateCheese( ISandwich aSandwich ) => new Cheese( aSandwich );
+        public ICondiment       CreateHam( ISandwich aSandwich ) => new Ham( aSandwich );
+        public ICondiment   CreateLettuce( ISandwich aSandwich ) => new Lettuce( aSandwich );
+        public ICondiment CreateCondiment( ISandwich aSandwich, string aType )
         {
             switch ( aType )
             {

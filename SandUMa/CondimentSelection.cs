@@ -10,7 +10,7 @@ namespace SandUMa
         {
             Debug.Assert( Machine.Sandwich != null );
 
-            Machine.Sandwich = Machine.Factory.CreateCondiment( aType, Machine.Sandwich );
+            Machine.Sandwich = Machine.Factory.CreateCondiment( Machine.Sandwich, aType );
             if ( Machine.Sandwich == null ) Machine.Current = Machine.OutOfService;
         }
 
