@@ -54,7 +54,7 @@
     <Compile Include="Lettuce.cs" />
     <Compile Include="OutOfService.cs" />
     <Compile Include="Payment.cs" />
-    <Compile Include="PotatoSandwich.cs" />
+    <Compile Include="PotatoBread.cs" />
     <Compile Include="Preparation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

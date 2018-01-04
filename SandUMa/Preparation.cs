@@ -8,9 +8,9 @@
         {
             ISandwich sandwich = Machine.Sandwich;
 
-            Machine.Sandwich   = null;
-            Machine.Amount  = 0.0;
-            Machine.Current = Machine.BreadSelection;
+            Machine.Sandwich = null;
+            Machine.Amount   = 0.0;
+            Machine.Current  = Machine.BreadSelection;
 
             return sandwich;
         }

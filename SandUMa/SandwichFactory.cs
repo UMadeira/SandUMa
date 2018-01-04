@@ -12,9 +12,8 @@
         }
         public ISandwich CreatePotatoBread()
         {
-            return new PotatoSandwich();
+            return new PotatoBread();
         }
-
         public ISandwich CreateBread( string aType )
         {
             switch ( aType )
