@@ -1,8 +1,8 @@
 ﻿namespace SandUMa
 {
-    public class WholeGrainBread : IBread
+    public class WholeGrainBread : ISandwich
     {
         public string Description => "Whole Grain Bread";
-        public double ComputePrice() => 1.4;
+        public double GetPrice() => 1.4;
     }
 }

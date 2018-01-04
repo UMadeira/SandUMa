@@ -4,15 +4,15 @@
     {
         public Preparation( SandwichMachine aMachine ) : base( aMachine ) { }
 
-        public override IBread Serve()
+        public override ISandwich Serve()
         {
-            IBread bread = Machine.Bread;
+            ISandwich sandwich = Machine.Sandwich;
 
-            Machine.Bread   = null;
+            Machine.Sandwich   = null;
             Machine.Amount  = 0.0;
             Machine.Current = Machine.BreadSelection;
 
-            return bread;
+            return sandwich;
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace SandUMa
 {
-    public class PotatoBread : IBread
+    public class PotatoSandwich : ISandwich
     {
         public string Description => "Potato Bread";
-        public double ComputePrice() => 1.6;
+        public double GetPrice() => 1.6;
     }
 }

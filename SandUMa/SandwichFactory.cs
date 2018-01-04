@@ -2,55 +2,54 @@
 {
     public class SandwichFactory
     {
-        public IBread CreateWhiteBread()
+        public ISandwich CreateWhiteBread()
         {
             return new WhiteBread();
         }
-        public IBread CreateWholeGrainBread()
+        public ISandwich CreateWholeGrainBread()
         {
             return new WholeGrainBread();
         }
-        public IBread CreatePotatoBreadad()
+        public ISandwich CreatePotatoBread()
         {
-            return new PotatoBread();
+            return new PotatoSandwich();
         }
 
-        public IBread CreateBread( string aType )
+        public ISandwich CreateBread( string aType )
         {
             switch ( aType )
             {
                 case      "WhiteBread": return CreateWhiteBread();
                 case "WholeGrainBread": return CreateWholeGrainBread();
-                case     "PotatoBread": return CreatePotatoBreadad();
+                case     "PotatoBread": return CreatePotatoBread();
             }
             return null;
         }
 
-        public IBreadCondiment CreateButter( IBread aBread )
+        public ICondiment CreateButter( ISandwich aSandwich )
         {
-            return new Butter( aBread );
+            return new Butter( aSandwich );
         }
-        public IBreadCondiment CreateCheese( IBread aBread )
+        public ICondiment CreateCheese( ISandwich aSandwich )
         {
-            return new Cheese( aBread );
+            return new Cheese( aSandwich );
         }
-        public IBreadCondiment CreateHam( IBread aBread )
+        public ICondiment CreateHam( ISandwich aSandwich )
         {
-            return new Ham( aBread );
+            return new Ham( aSandwich );
         }
-        public IBreadCondiment CreateLettuce( IBread aBread )
+        public ICondiment CreateLettuce( ISandwich aSandwich )
         {
-            return new Lettuce( aBread );
+            return new Lettuce( aSandwich );
         }
-
-        public IBreadCondiment CreateCondiment( string aType, IBread aBread )
+        public ICondiment CreateCondiment( string aType, ISandwich aSandwich )
         {
             switch ( aType )
             {
-                case  "Butter": return CreateButter( aBread );
-                case  "Cheese": return CreateCheese( aBread );
-                case     "Ham": return CreateHam( aBread );
-                case "Lettuce": return CreateLettuce( aBread );
+                case  "Butter": return CreateButter( aSandwich );
+                case  "Cheese": return CreateCheese( aSandwich );
+                case     "Ham": return CreateHam( aSandwich );
+                case "Lettuce": return CreateLettuce( aSandwich );
             }
             return null;
         }

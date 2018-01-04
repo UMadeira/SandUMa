@@ -1,8 +1,8 @@
 ﻿namespace SandUMa
 {
-    public interface IBread
+    public interface ISandwich
     {
         string Description { get; }
-        double ComputePrice();
+        double GetPrice();
     }
 }

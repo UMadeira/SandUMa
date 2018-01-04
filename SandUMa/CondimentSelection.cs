@@ -8,17 +8,15 @@ namespace SandUMa
 
         public override void SelectCondiment( string aType )
         {
-            Debug.Assert( Machine.Bread != null );
+            Debug.Assert( Machine.Sandwich != null );
 
-            if ( string.IsNullOrEmpty( aType ) )
-            {
-                Machine.Current = Machine.Payment;
-            }
-            else
-            {
-                Machine.Bread = Machine.Factory.CreateCondiment( aType, Machine.Bread );
-                if ( Machine.Bread == null ) Machine.Current = Machine.OutOfService;
-            }
+            Machine.Sandwich = Machine.Factory.CreateCondiment( aType, Machine.Sandwich );
+            if ( Machine.Sandwich == null ) Machine.Current = Machine.OutOfService;
+        }
+
+        public override void Confirm()
+        {
+            Machine.Current = Machine.Payment;
         }
     }
 }

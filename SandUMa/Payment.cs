@@ -8,9 +8,9 @@ namespace SandUMa
 
         public override void Pay( double aAmount )
         {
-            Debug.Assert( Machine.Bread != null );
+            Debug.Assert( Machine.Sandwich != null );
             Machine.Amount += aAmount;
-            var amount = Machine.Bread.ComputePrice();
+            var amount = Machine.Sandwich.GetPrice();
             if ( Machine.Amount >= amount )
             {
                 Machine.Amount -= amount;

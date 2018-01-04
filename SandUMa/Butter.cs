@@ -1,14 +1,14 @@
 ﻿namespace SandUMa
 {
-    public class Butter : IBreadCondiment
+    public class Butter : ICondiment
     {
-        public Butter( IBread aBread )
+        public Butter( ISandwich aSandwich )
         {
-            Componente = aBread;
+            Sandwich = aSandwich;
         }
 
-        public IBread Componente { get; }
-        public string Description => Componente.Description + ", with Butter";
-        public double ComputePrice() =>Componente.ComputePrice() + 0.2;
+        public ISandwich Sandwich { get; }
+        public string Description => Sandwich.Description + ", with Butter";
+        public double GetPrice() => Sandwich.GetPrice() + 0.2;
     }
 }

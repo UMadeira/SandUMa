@@ -8,12 +8,12 @@ namespace SandUMa
 
         public override void SelectBread( string aType )
         {
-            Debug.Assert( Machine.Bread == null );
+            Debug.Assert( Machine.Sandwich == null );
 
-            Machine.Bread   = Machine.Factory.CreateBread( aType );
-            Machine.Current = Machine.Bread == null 
-                            ? Machine.OutOfService 
-                            : Machine.CondimentSelection;
+            Machine.Sandwich = Machine.Factory.CreateBread( aType );
+            Machine.Current  = Machine.Sandwich == null 
+                             ? Machine.OutOfService 
+                             : Machine.CondimentSelection;
         }
     }
 }

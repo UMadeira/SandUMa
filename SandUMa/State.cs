@@ -11,14 +11,15 @@
 
         public virtual void Cancel()
         {
-            Machine.Bread   = null;
+            Machine.Sandwich   = null;
             Machine.Amount  = 0.0;
             Machine.Current = Machine.BreadSelection;
         }
 
         public virtual void   SelectBread( string aType ) {}
         public virtual void   SelectCondiment( string aType ) { }
+        public virtual void   Confirm() { }
         public virtual void   Pay( double aAmount ) { }
-        public virtual IBread Serve() { return null; }
+        public virtual ISandwich Serve() { return null; }
     }
 }

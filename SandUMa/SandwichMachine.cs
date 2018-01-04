@@ -24,11 +24,10 @@
 
         public SandwichFactory Factory { get; } = new SandwichFactory();
 
-        public IBread Bread { get; set; }
+        public ISandwich Sandwich { get; set; }
         public double Amount { get; set; }
 
         // States
-
         public IState OutOfService { get; }
         public IState BreadSelection { get; } 
         public IState CondimentSelection { get; } 
@@ -38,11 +37,11 @@
         public IState Current { get; set; }
         
         // Event Handlers
-
-        public void   SelectBread( string aType ) => Current.SelectBread( aType );
-        public void   SelectCondiment( string aType ) => Current.SelectCondiment( aType );
-        public void   Pay( double aAmount ) => Current.Pay( aAmount );
-        public IBread Serve() => Current.Serve();
-        public void   Cancel() => Current.Cancel();
+        public void      SelectBread( string aType ) => Current.SelectBread( aType );
+        public void      SelectCondiment( string aType ) => Current.SelectCondiment( aType );
+        public void      Confirm() => Current.Confirm();
+        public void      Pay( double aAmount ) => Current.Pay( aAmount );
+        public ISandwich Serve() => Current.Serve();
+        public void      Cancel() => Current.Cancel();
     }
 }

@@ -48,13 +48,13 @@
     <Compile Include="Cheese.cs" />
     <Compile Include="CondimentSelection.cs" />
     <Compile Include="Ham.cs" />
-    <Compile Include="IBread.cs" />
-    <Compile Include="IBreadCondiment.cs" />
+    <Compile Include="ISandwich.cs" />
+    <Compile Include="ICondiment.cs" />
     <Compile Include="IState.cs" />
     <Compile Include="Lettuce.cs" />
     <Compile Include="OutOfService.cs" />
     <Compile Include="Payment.cs" />
-    <Compile Include="PotatoBread.cs" />
+    <Compile Include="PotatoSandwich.cs" />
     <Compile Include="Preparation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
